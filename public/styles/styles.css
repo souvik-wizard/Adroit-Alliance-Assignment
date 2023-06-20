@@ -213,6 +213,8 @@ section#hero {
 #card-wrapper {
   width: 100%;
   display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -241,10 +243,18 @@ section#hero {
   text-align: center;
   line-height: 50px;
   background: transparent;
-  /* border: 0.1px solid #000000; */
+  border: 0.1px solid #000000;
   border-radius: 50%;
   transform: translateY(-50%);
   transition: transform 0.1s linear;
+}
+
+.rating {
+  width: 5rem;
+}
+
+.rating-info {
+  align-items: left;
 }
 
 .wrapper i:active {
@@ -323,10 +333,10 @@ section#hero {
   font-size: 1.31rem;
 }
 
-/* ------------------------------------- 3rd page card */
+/* ------------------------------------- blog card1 */
 
 .card-container {
-  
+
   display: flex;
   align-items: center;
   height: 100vh;
@@ -345,23 +355,19 @@ section#hero {
   flex-direction: column;
   gap: 1rem;
   justify-content: space-around;
-  align-items: self-start;
+  text-align: left;
   padding: 10rem;
 }
 
 .card-content h3 {
-  font-size: 3rem;
+  font-size: 2.2rem;
   margin-bottom: 10px;
-
-
 }
 
 .card-content p {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   color: #777;
-  margin-bottom: 3rem;
-
-
+  margin-bottom: 2rem;
 }
 
 .about-btn {
@@ -377,26 +383,139 @@ section#hero {
 }
 
 
-@media screen and (max-width: 900px) {
-  .wrapper .carousel {
-    grid-auto-columns: calc((100% / 2) - 9px);
-  }
+/* blog card 2 */
 
-  .wrapper i {
-    visibility: hidden;
+.blog-card2 .card-container {
+  background: #fff;
+}
+
+.blog2 {
+  gap: 3rem
+}
+
+.blog-img2 {
+  padding: 5rem 0 5rem 10rem;
+}
+
+
+/* social page */
+
+.social {
+  background: #eee7e7;
+  padding: 6rem;
+}
+.social-content {
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem 0;
+}
+
+.social-images {
+  display: flex;
+  justify-content: center;
+  
+}
+
+.social-images img {
+  width: 25%;
+}
+
+/* ------------------------------- */
+
+/* Assuming the input field has the class "footer-input" */
+
+.footer-input {
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid #666;
+  padding: 5px;
+  color: #666;
+  font-size: 14px;
+  width: 100%;
+  box-sizing: border-box;
+  transition: border-color 0.3s ease;
+}
+
+.footer-input:focus {
+  outline: none;
+  border-color: #333;
+}
+
+/* FOOTER------------------------------------ */
+footer {
+  background-color: #EDC6B1;
+  padding: 20px 0;
+  color: #666;
+  font-family: Arial, sans-serif;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.footer-content {
+  flex-basis: 30%;
+  margin-bottom: 20px;
+}
+
+.footer-content h4 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.footer-content p {
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+.footer-logo {
+  max-width: 100%;
+  height: auto;
+}
+
+.social-media a {
+  display: inline-block;
+  margin-right: 10px;
+  color: #666;
+  transition: color 0.3s ease;
+}
+
+.social-media a:hover {
+  color: #333;
+}
+
+.fa-facebook:before {
+  content: "\f09a";
+}
+
+.fa-twitter:before {
+  content: "\f099";
+}
+
+.fa-instagram:before {
+  content: "\f16d";
+}
+
+@media (max-width: 768px) {
+  .footer-content {
+    flex-basis: 45%;
   }
 }
 
-@media screen and (max-width: 600px) {
-  .wrapper .carousel {
-    grid-auto-columns: 100%;
+@media (max-width: 576px) {
+  .footer-content {
+    flex-basis: 100%;
   }
 }
-
-
 
 
 /* RESPONSIVE DESIGN */
+
+
 @media (max-width: 992px) {
 
   .navbar .links,
@@ -423,6 +542,19 @@ section#hero {
     align-items: center;
     justify-content: center;
   }
+
+  .wrapper .carousel {
+    grid-auto-columns: calc((100% / 2) - 9px);
+  }
+
+  .wrapper i {
+    visibility: hidden;
+  }
+
+  .social-images {
+    flex-direction: column;
+    width: 100%
+  }
 }
 
 @media (max-width: 576px) {
@@ -430,5 +562,9 @@ section#hero {
     left: 2rem;
     margin-top: 1rem;
     width: unset;
+  }
+
+  .wrapper .carousel {
+    grid-auto-columns: 100%;
   }
 }
