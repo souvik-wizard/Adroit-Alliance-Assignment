@@ -4,7 +4,10 @@
   box-sizing: border-box;
   font-family: 'Josefin Sans', sans-serif;
 }
-
+body{
+  margin: 0;
+  padding: 0;
+}
 .background {
   width: 100%;
   height: 100vh;
@@ -35,7 +38,7 @@ li {
   list-style: none;
 }
 
-a {
+li a {
   text-decoration: none;
   color: #fff;
   font-size: 1rem;
@@ -67,6 +70,7 @@ header {
   font-family: 'Josefin Sans', sans-serif;
   font-size: 3rem;
   font-weight: 600;
+  text-decoration: none;
 }
 
 .navbar .links {
@@ -334,7 +338,16 @@ section#hero {
 }
 
 /* ------------------------------------- blog card1 */
+.hr-dash{
+  display:flex;
+  gap:1rem;
+  align-items:center;
 
+}
+.hr-dash hr{
+  color: red;
+  /* max-width: 10px; */
+}
 .card-container {
 
   display: flex;
@@ -368,6 +381,7 @@ section#hero {
   font-size: 1.2rem;
   color: #777;
   margin-bottom: 2rem;
+  
 }
 
 .about-btn {
@@ -404,6 +418,7 @@ section#hero {
   background: #eee7e7;
   padding: 6rem;
 }
+
 .social-content {
   display: flex;
   justify-content: space-between;
@@ -413,16 +428,15 @@ section#hero {
 .social-images {
   display: flex;
   justify-content: center;
-  
+
 }
 
 .social-images img {
   width: 25%;
 }
 
-/* ------------------------------- */
 
-/* Assuming the input field has the class "footer-input" */
+/* FOOTER------------------------------------ */
 
 .footer-input {
   background-color: transparent;
@@ -431,7 +445,7 @@ section#hero {
   padding: 5px;
   color: #666;
   font-size: 14px;
-  width: 100%;
+  width: 70%;
   box-sizing: border-box;
   transition: border-color 0.3s ease;
 }
@@ -441,82 +455,121 @@ section#hero {
   border-color: #333;
 }
 
-/* FOOTER------------------------------------ */
 footer {
-  background-color: #EDC6B1;
-  padding: 20px 0;
-  color: #666;
-  font-family: Arial, sans-serif;
-}
-
-.footer-container {
+  width: 100%;
+  height: 40vh;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  max-width: 900px;
-  margin: 0 auto;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #dab098;
+  padding: 30px ;
+  color: #666;
+  gap:4rem;
+  position: relative;
+  /* overflow-y: visible;
+  
+  overflow-x: hidden; */
 }
 
 .footer-content {
-  flex-basis: 30%;
-  margin-bottom: 20px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content:center;
+  overflow: visible;
+}
+ .first-container{
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  width: 40%;
+  margin-left: auto;
+}
+.terms{
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+.terms div{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  margin-left: 6.5rem;
+}
+.terms i{
+  margin-right: 3rem;
+}
+.second-container{
+  width: 40%; 
+  display: flex;
+  gap:5rem;
+  margin-left:auto
 }
 
-.footer-content h4 {
-  font-size: 18px;
+
+ .footer-content h4 {
+  font-size: 2rem;
   margin-bottom: 10px;
 }
 
 .footer-content p {
-  font-size: 14px;
+  font-size: 1rem;
   margin-bottom: 5px;
-}
+} 
 
 .footer-logo {
-  max-width: 100%;
-  height: auto;
+  position:absolute;
+  top:-6rem;
+  right: -2rem;
+  width: 300px;
+  height: 300px;
+  mix-blend-mode:multiply ;
+} 
+.footer-art{
+  max-width: 20%;
+  position: absolute;
+  left: 98%;
+  top:-0.5rem;
 }
-
-.social-media a {
-  display: inline-block;
-  margin-right: 10px;
+.second-container a, .terms a {
   color: #666;
-  transition: color 0.3s ease;
+  text-decoration: none;
 }
+.email{
+  display: flex ;
+  cursor: pointer;
 
-.social-media a:hover {
-  color: #333;
 }
-
-.fa-facebook:before {
-  content: "\f09a";
+.details{
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
 }
+.ball,.ball2{
+  background-color: #eee7e7;
+  position: absolute;
+  top: -35px;
+  left: 49%;
+  width:70px;
+  height: 70px;
+  border-radius: 50%;
 
-.fa-twitter:before {
-  content: "\f099";
 }
-
-.fa-instagram:before {
-  content: "\f16d";
+#page2{
+  position: relative;
 }
-
-@media (max-width: 768px) {
-  .footer-content {
-    flex-basis: 45%;
-  }
-}
-
-@media (max-width: 576px) {
-  .footer-content {
-    flex-basis: 100%;
-  }
+.ball2{
+  background-color: #ffffff;
 }
 
 
 /* RESPONSIVE DESIGN */
 
 
-@media (max-width: 992px) {
+@media (max-width: 768px) {
 
   .navbar .links,
   .navbar .action_btn {
@@ -555,6 +608,99 @@ footer {
     flex-direction: column;
     width: 100%
   }
+  .footer-content {
+    flex-basis: 45%;
+  }
+  .ball, .ball2{
+    display: none;
+  }
+  .collections{
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+    gap: 5rem;
+
+  }
+  .bl-border{
+    margin-right:auto;
+  }
+  .page2{
+    height: 30vh;
+  }
+  .card-image{
+    display: none;
+  }
+  .card-content{
+    padding: 2rem;
+  }
+  .footer-art{
+    display: none;
+  }
+  .footer-content{
+    display: flex;
+    flex-direction: column;
+    margin: none;
+  }
+  .first-container{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-right: auto;
+    min-width: 100%;
+    margin-bottom: 1rem;
+    padding-top: 2rem;
+  }
+  .second-container{
+    display: flex;
+    margin-right: auto;
+    min-width: 100%;
+    margin-top: 1rem;
+    font-size: small;
+  }
+  footer{
+   min-height:65vh;
+   padding: 1rem;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   gap: 1rem;
+  }
+  .terms{
+    min-width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    font-size: 0.7rem;
+    gap: 1rem;
+  }
+  .terms div{
+    margin-left: auto;
+
+  }
+  .terms i{
+    display: none;
+  }
+  .social{
+    padding: 1rem;
+  }
+  .social-content{
+    font-size: 0.7rem;
+  }
+  .social-images{
+    display: flex;
+    min-width: 100%;
+    justify-content: center;
+    align-items: center;
+    gap:1rem
+
+  }
+  .social-images img{
+    min-width: 80%;
+    border-radius: 10px;
+  }
+
 }
 
 @media (max-width: 576px) {
@@ -566,5 +712,8 @@ footer {
 
   .wrapper .carousel {
     grid-auto-columns: 100%;
+  }
+  .footer-content {
+    flex-basis: 100%;
   }
 }
