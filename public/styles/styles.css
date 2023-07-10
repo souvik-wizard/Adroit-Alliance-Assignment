@@ -565,6 +565,9 @@ footer {
   background-color: #ffffff;
 }
 
+#instalogo{
+  cursor: pointer;
+}
 
 /* RESPONSIVE DESIGN */
 
