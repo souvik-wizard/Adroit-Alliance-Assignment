@@ -1,5 +1,5 @@
 ## Preview
-- Deskktop View
+- Desktop View
 
 ![Screenshot (4)](https://github.com/souvik-wizard/Adroit-Alliance-Assignment/assets/103851921/37cd5f1e-4974-494b-99c5-fd6fb1a5c927)
 ![Screenshot (5)](https://github.com/souvik-wizard/Adroit-Alliance-Assignment/assets/103851921/49093cf2-8f57-4aea-80bd-166dc8514cf2)
